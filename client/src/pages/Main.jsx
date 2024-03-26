@@ -24,7 +24,7 @@ export default function Main() {
   function handleAdd() {
     if (taskInput.current.value) {
       const newTask = taskInput.current.value.trim();
-      addTask(newTask, fetchTasks);
+      addTask(username, newTask, fetchTasks);
       taskInput.current.value = "";
     }
   }

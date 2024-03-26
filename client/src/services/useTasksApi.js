@@ -65,12 +65,12 @@ export async function editTask(task_id, fetchTasks, task) {
   }
 }
 
-export async function addTask(task, fetchTasks) {
+export async function addTask(name, task, fetchTasks) {
   const url = "https://centipedolist.vercel.app/task";
   try {
     const res = await fetch(url, {
       method: "POST",
-      body: JSON.stringify({ task: task }),
+      body: JSON.stringify({ task: task, username: name }),
       withCredentials: true,
       credentials: "include",
       headers: {
