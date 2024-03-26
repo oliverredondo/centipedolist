@@ -9,8 +9,8 @@ export async function handleLogin(e, name, password, setStatus, navigate) {
   try {
     const response = await fetch("https://centipedolist.vercel.app/login", {
       method: "POST",
-      withCredentials: true,
-      credentials: "include",
+      // withCredentials: true,
+      // credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },

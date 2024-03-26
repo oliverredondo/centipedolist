@@ -2,8 +2,8 @@ export async function checkSession(setStatus) {
   const url = "https://centipedolist.vercel.app/session";
   const res = await fetch(url, {
     method: "GET",
-    withCredentials: true,
-    credentials: "include",
+    // withCredentials: true,
+    // credentials: "include",
     headers: {
       "Content-Type": "application/json",
     },
