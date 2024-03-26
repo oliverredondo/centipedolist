@@ -28,9 +28,7 @@ const bcrypt = require("bcrypt");
 const { v4: uuidv4 } = require("uuid");
 
 // Middlewears
-app.use(
-  cors({ credentials: true, origin: "https://centipedolist-fe.vercel.app" })
-);
+app.use(cors({ credentials: true, origin: "*" }));
 //CHECK IF NEEDED WHEN DEPLOYED
 app.use(bodyParser.json());
 
@@ -153,6 +151,7 @@ app.post("/task", async (req, res) => {
   try {
     const user_id = req.body.user_id;
     const task = req.body.task;
+    console.log(req.user);
     await createTask(user_id, task);
     res.status(200).json({ message: "Task created successfully" });
   } catch (error) {
