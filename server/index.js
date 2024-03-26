@@ -147,9 +147,9 @@ app.get("/session", (req, res) => {
 });
 
 // Creating a task
-app.post("/task", async (req, res) => {
+app.post("/task", isAuth, async (req, res) => {
   try {
-    const user_id = req.body.user_id;
+    const user_id = req.user.id;
     const task = req.body.task;
     console.log(req.user);
     await createTask(user_id, task);
