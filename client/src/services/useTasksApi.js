@@ -3,8 +3,8 @@ export async function getTasks(setTasks) {
   try {
     const res = await fetch(url, {
       method: "GET",
-      withCredentials: true,
-      credentials: "include",
+      // withCredentials: true,
+      // credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -28,7 +28,7 @@ export async function deleteTask(task_id, fetchTasks) {
       method: "DELETE",
       withCredentials: true,
       body: JSON.stringify(task_id_json),
-      credentials: "include",
+      // credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -48,8 +48,8 @@ export async function editTask(task_id, fetchTasks, task) {
   try {
     const res = await fetch(url, {
       method: "PUT",
-      withCredentials: true,
-      credentials: "include",
+      // withCredentials: true,
+      // credentials: "include",
       body: JSON.stringify({ task_id: task_id, task: task }),
       headers: {
         "Content-Type": "application/json",
@@ -71,8 +71,8 @@ export async function addTask(name, task, fetchTasks) {
     const res = await fetch(url, {
       method: "POST",
       body: JSON.stringify({ task: task, username: name }),
-      withCredentials: true,
-      credentials: "include",
+      // withCredentials: true,
+      // credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
