@@ -35,8 +35,8 @@ export default function Main() {
     try {
       const res = await fetch(url, {
         method: "POST",
-        credentials: "include",
-        withCredentials: true,
+        // credentials: "include",
+        // withCredentials: true,
         headers: {
           "Content-Type": "application/json",
         },
